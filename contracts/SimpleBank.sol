@@ -93,7 +93,6 @@ contract SimpleBank {
 
         if(balances[msg.sender] > withdrawAmount) 
             revert();
-
         balances[msg.sender] = balances[msg.sender] - withdrawAmount;
 
         emit LogWithdrawal(msg.sender, withdrawAmount, balances[msg.sender]);
